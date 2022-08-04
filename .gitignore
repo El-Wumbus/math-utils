@@ -1,5 +1,6 @@
 CMakeLists.txt.user
 CMakeCache.txt
+src/*.h++
 CMakeFiles
 CMakeScripts
 Testing
@@ -9,3 +10,12 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+*.cmake
+math.*
+*.tar.*
+*.zip
+*.7z
+*-Linux.sh
+_CPack_Packages
+dist
+build/*
