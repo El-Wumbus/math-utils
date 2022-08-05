@@ -12,6 +12,12 @@ int main(int argc, char **argv) {
     if (optind == argc) {
       break;
     }
+    while (i < strlen(argv[optind])) {
+      if (argv[optind][i] == '\n') {
+        argv[optind][i] = '\0';
+      }
+      i++;
+    }
     printf("%g\n", sqrt(atof(argv[optind])));
   }
   return 0;

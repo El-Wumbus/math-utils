@@ -62,6 +62,13 @@ int main(int argc, char **argv) {
   }
 
   for (; optind < argc; optind++) { // when some extra arguments are passed
+    int i = 0;
+    while (i < strlen(argv[optind])) {
+      if (argv[optind][i] == '\n') {
+        argv[optind][i] = '\0';
+      }
+      i++;
+    }
     if (sci) {
       printf("%.30Lg\n", dnorm(atof(argv[optind]), mean, std_dev));
     } else {

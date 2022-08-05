@@ -1,9 +1,8 @@
-#ifndef cos_h
-#define cos_h
+#ifndef log10_h
+#define log10_h
 #define VERSION "0.1"
-#define PROGRAM_NAME "cos"
+#define PROGRAM_NAME "log10"
 #include <iostream>
-#include <cstring>
 #include <cstdio>
 #include <cmath>
 #endif

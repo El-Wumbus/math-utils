@@ -1,8 +1,8 @@
-#include "sin.hpp"
+#include "log10.hpp"
 
 int main(int argc, char **argv) {
   if (argc < 2) {
-    printf("%s::return value of sin(num) in radians \nUsage: %s <num> ...\n", argv[0], argv[0]);
+    printf("%s::return value of log10(num) in base-e \nUsage: %s <num> ...\n", argv[0], argv[0]);
     return 1;
   }
   for (int optind = 1; optind < argc + 1; ++optind) {
@@ -12,13 +12,14 @@ int main(int argc, char **argv) {
     if (optind == argc) {
       break;
     }
+    int i=0;
     while (i < strlen(argv[optind])) {
       if (argv[optind][i] == '\n') {
         argv[optind][i] = '\0';
       }
       i++;
     }
-    printf("%g\n", sin(atof(argv[optind])));
+    printf("%.18g\n", log10(atof(argv[optind])));
   }
   return 0;
 }

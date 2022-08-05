@@ -1,0 +1,7 @@
+#ifndef tan_h
+#define tan_h
+#define VERSION "@ver@"
+#define PROGRAM_NAME "tan"
+#include <cstdio>
+#include <cmath>
+#endif
