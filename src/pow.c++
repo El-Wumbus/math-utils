@@ -15,7 +15,6 @@ int main(int argc, char **argv) {
       i++;
     }
   }
-  double value, exponent;
   printf("%g\n", pow(atof(argv[1]), atof(argv[2])));
   return 0;
 }

@@ -1,7 +1,7 @@
 #include "mean.hpp"
 double avg(std::vector<double> values) {
   double result = 0;
-  for (int i = 0; i < values.size(); i++) {
+  for (unsigned int i = 0; i < values.size(); i++) {
     result += values[i];
 
   }
@@ -15,7 +15,7 @@ unsigned int i=0;
     return 1;
   }
   std::vector<double> values;
-  for (unsigned int optind = 1; optind < argc + 1; ++optind) {
+  for (int optind = 1; optind < argc + 1; ++optind) {
     if (optind == 0) {
       continue;
     }

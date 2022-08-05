@@ -3,7 +3,7 @@
 double sub(std::vector<double> values)
 {
   double diff = 0;
-  for (int i = 0; i < values.size(); i++) {
+  for (unsigned int i = 0; i < values.size(); i++) {
     diff = diff - values[i];
   }
   return diff;

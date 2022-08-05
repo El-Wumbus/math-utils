@@ -5,7 +5,7 @@ int main(int argc, char **argv) {
     printf("%s::return value of cos(num) in radians \nUsage: %s <num> ...\n", argv[0], argv[0]);
     return 1;
   }
-  int i=0;
+  unsigned int i=0;
 
   for (int optind = 1; optind < argc + 1; ++optind) {
     if (optind == 0) {
