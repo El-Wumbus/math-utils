@@ -1,0 +1,11 @@
+#ifndef sin_h
+#define sin_h
+#define VERSION "@ver@"
+#define PROGRAM_NAME "sin"
+#include <cmath>
+#include <limits>
+#include <iostream>
+#include <cstdio>
+using namespace std;
+long double sin();
+#endif

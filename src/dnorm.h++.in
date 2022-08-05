@@ -1,4 +1,4 @@
-#define VERSION @version@
+#define VERSION "@ver@"
 #define PROGRAM_NAME "dnorm"
 #ifndef dnorm_h
 #define dnorm_h
@@ -16,5 +16,6 @@ static struct option long_options[] = {
     {"standard_deviation", required_argument, 0, 's'},
     {"version", no_argument, 0, 'v'},
     {"disable_sientific", no_argument, 0, 'd'},
-    {0, 0, 0, 0}};
+    {0, 0, 0, 0}
+};
 #endif

@@ -10,7 +10,7 @@ set(ver ${math-utils_VERSION_MAJOR}.${math-utils_VERSION_MINOR})
 project(math-utils VERSION ${ver} )
 # specify the C++ standard
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CURRENT_SOURCE_DIR src)
 
@@ -18,17 +18,33 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/dnorm.h++.in ${CMAKE_CURRENT_SOURCE_D
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/absval.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/absval.h++)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/add.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/add.h++)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sub.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/sub.h++)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/pi.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/pi.h++)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sin.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/sin.h++)
+
 
 add_executable(math.dnorm ${CMAKE_CURRENT_SOURCE_DIR}/dnorm.c++)
 add_executable(math.abs ${CMAKE_CURRENT_SOURCE_DIR}/absval.c++)
 add_executable(math.add ${CMAKE_CURRENT_SOURCE_DIR}/add.c++)
 add_executable(math.sub ${CMAKE_CURRENT_SOURCE_DIR}/sub.c++)
+add_executable(math.pi ${CMAKE_CURRENT_SOURCE_DIR}/pi.c++)
+add_executable(math.sin ${CMAKE_CURRENT_SOURCE_DIR}/sin.c++)
 
 
 install(TARGETS math.dnorm DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 install(TARGETS math.abs DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 install(TARGETS math.add DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 install(TARGETS math.sub DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
+install(TARGETS math.pi DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
+install(TARGETS math.sin DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
+
+function (add_file target)
+  add_executable(math.${target} ${CMAKE_CURRENT_SOURCE_DIR}/${target}.c++)
+  install(TARGETS math.${target} DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
+
+  endfunction()
+
+add_file(e)
+
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 install(TARGETS math.dnorm DESTINATION lib)
@@ -47,6 +63,7 @@ do_test(1 /opt/math-utils/bin/math.dnorm "0" "0.39894228040143271945151132174")
 do_test(2 /opt/math-utils/bin/math.dnorm "1" "0.241970724519143375234419938991")
 do_test(3 /opt/math-utils/bin/math.abs "255" "255")
 do_test(4 /opt/math-utils/bin/math.abs "-255" "255")
+# do_test(5 /opt/math-utils/bin/math.pi "0" "0")
 # do_test(5 /opt/math-utils/bin/math.add "1 2" "3")
 # do_test(6 /opt/math-utils/bin/math.add "1 2 1 40" "44")
 # do_test(7 /opt/math-utils/bin/math.sub "1 3" "-4")
