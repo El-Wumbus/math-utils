@@ -46,6 +46,7 @@ function (add_file target)
 
 add_file(e)
 add_file(mult)
+add_file(div)
 
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
