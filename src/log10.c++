@@ -1,6 +1,7 @@
 #include "log10.hpp"
 
 int main(int argc, char **argv) {
+    unsigned int i=0;
   if (argc < 2) {
     printf("%s::return value of log10(num) in base-e \nUsage: %s <num> ...\n", argv[0], argv[0]);
     return 1;
@@ -12,7 +13,6 @@ int main(int argc, char **argv) {
     if (optind == argc) {
       break;
     }
-    int i=0;
     while (i < strlen(argv[optind])) {
       if (argv[optind][i] == '\n') {
         argv[optind][i] = '\0';

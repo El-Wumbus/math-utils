@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER "clang")
 set(CMAKE_CXX_COMPILER "clang++")
 
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+
 # set the project name and version
 set(math-utils_VERSION_MAJOR "0")
 set(math-utils_VERSION_MINOR "1")
@@ -33,11 +35,11 @@ add_file(sin)
 add_file(abs)
 add_file(add)
 add_file(sub)
+add_file(mean)
 add_file(mult)
 add_file(sqrt)
 add_file(log10)
 add_file(dnorm)
-add_file(mean)
 add_file(median)
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})

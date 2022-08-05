@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
     if (optind == argc) {
       break;
     }
-    int i = 0;
+    unsigned int i = 0;
     while (i < strlen(argv[optind])) {
       if (argv[optind][i] == '\n') {
         argv[optind][i] = '\0';

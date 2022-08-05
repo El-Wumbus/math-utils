@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
     }
   }
 
-    int i = 0;
+    unsigned int i = 0;
   for (; optind < argc; optind++) { // when some extra arguments are passed
     while (i < strlen(argv[optind])) {
       if (argv[optind][i] == '\n') {

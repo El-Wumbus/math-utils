@@ -1,14 +1,14 @@
 #include "add.hpp"
 double add(std::vector<double> values) {
   double sum = 0;
-  for (int i = 0; i < values.size(); i++) {
+  for (unsigned int i = 0; i < values.size(); i++) {
     sum += values[i];
   }
   return sum;
 }
 
 int main(int argc, char **argv) {
-int i=0;
+unsigned int i=0;
   if (argc < 3) {
     printf("Usage: %s <number1> <number2>...\n", argv[0]);
     return 1;

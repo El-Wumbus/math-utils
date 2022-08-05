@@ -8,7 +8,7 @@ double median(std::vector<double> values) {
 }
 
 int main(int argc, char **argv) {
-int i=0;
+unsigned int i=0;
   if (argc < 3) {
     printf("Usage: %s <num1> <num2>...\n", argv[0]);
     return 1;

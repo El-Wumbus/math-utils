@@ -8,7 +8,7 @@ double abs(double x) {
 }
 
 int main(int argc, char **argv) {
-int i;
+unsigned int i;
   for (int optind =0 ; optind < argc; optind++) { // when some extra arguments are passed
     double absval = abs(atof(argv[optind]));
     if (absval == 0)
