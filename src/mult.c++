@@ -1,5 +1,6 @@
 #include "mult.h++"
 double mult(std::vector<double> values) {
+  // Multiplying all the values in the vector together.
   double result =1;
   for (int i = 0; i < values.size(); i++) {
     result = result * values[i];

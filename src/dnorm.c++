@@ -16,6 +16,7 @@ long double dnorm(double x, double mean = 0, double standard_deviation = 1) {
   /* Gaussian (standard) distribution
   https://introcs.cs.princeton.edu/java/11gaussian/
   */
+  // Calculating the normalization constant of the normal distribution
   long double normalization_constant =
       (long double)1 / (sqrt(2 * PI * pow(standard_deviation, 2)));
   long double z_score = (x - mean) / standard_deviation;

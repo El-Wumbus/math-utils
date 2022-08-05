@@ -1,6 +1,7 @@
 #include "div.h++"
 double div(std::vector<double> values) {
   double result = 0;
+  // Iterating through the vector and dividing each element by the previous element.
   for (int i = 0; i < values.size(); i++) {
     if (result == 0) {
       result = values[i];
@@ -26,10 +27,6 @@ int main(int argc, char **argv) {
     if (optind == argc) {
       break;
     }
-    // if (strcmp(argv[optind], "0") == 0) {
-    //   std::cout << "Error: division by zero" << std::endl;
-    //   return 1;
-    // }
     values.push_back(atof(argv[optind]));
   }
   printf("%g\n", div(values));
