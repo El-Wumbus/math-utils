@@ -37,6 +37,8 @@ add_file(mult)
 add_file(sqrt)
 add_file(log10)
 add_file(dnorm)
+add_file(mean)
+add_file(median)
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 install(TARGETS math.dnorm DESTINATION lib)
