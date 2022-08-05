@@ -1,6 +1,6 @@
 #ifndef add_h
 #define add_h
-#define VERSION @version@
+#define VERSION "@ver@"
 #define PROGRAM_NAME "add"
 #include <iostream>
 #include <cstdio>
