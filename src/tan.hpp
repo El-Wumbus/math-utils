@@ -4,4 +4,5 @@
 #define PROGRAM_NAME "tan"
 #include <cstdio>
 #include <cmath>
+#include <cstring>
 #endif

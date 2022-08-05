@@ -1,6 +1,7 @@
 #include "sin.hpp"
 
 int main(int argc, char **argv) {
+  int i=0;
   if (argc < 2) {
     printf("%s::return value of sin(num) in radians \nUsage: %s <num> ...\n", argv[0], argv[0]);
     return 1;

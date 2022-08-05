@@ -6,5 +6,7 @@
 #include <cstdio>
 #include <stdarg.h>
 #include <vector>
+#include <cstring>
+
 double add(std::vector<double> values);
 #endif

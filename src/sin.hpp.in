@@ -6,6 +6,8 @@
 #include <limits>
 #include <iostream>
 #include <cstdio>
+#include <cstring>
+
 using namespace std;
 long double sin();
 #endif

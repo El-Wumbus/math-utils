@@ -5,5 +5,7 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <cstring>
+
 double sub(std::vector<double> values);
 #endif

@@ -1,6 +1,8 @@
 #include "pow.hpp"
 
 int main(int argc, char **argv) {
+  int i=0;
+
   if (argc < 3) {
     printf("Usage: %s <base> <exponent>\n", argv[0]);
     return 1;

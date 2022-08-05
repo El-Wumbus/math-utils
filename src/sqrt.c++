@@ -1,6 +1,7 @@
 #include "sqrt.hpp"
 
 int main(int argc, char **argv) {
+  int i = 0;
   if (argc < 2) {
     printf("%s::return value of sin() in radians \nUsage: %s <number1> ...\n", argv[0], argv[0]);
     return 1;

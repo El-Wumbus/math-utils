@@ -4,4 +4,5 @@
 #define PROGRAM_NAME "pow"
 #include <cstdio>
 #include <cmath>
+#include <cstring>
 #endif

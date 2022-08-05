@@ -5,4 +5,5 @@
 #include <iostream>
 #include <cstdio>
 #include <cmath>
+#include <cstring>
 #endif

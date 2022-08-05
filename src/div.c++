@@ -15,6 +15,7 @@ double div(std::vector<double> values) {
 }
 
 int main(int argc, char **argv) {
+int i=0;
 
   if (argc < 3) {
     printf("Usage: %s <number1> <number2>...\n", argv[0]);
