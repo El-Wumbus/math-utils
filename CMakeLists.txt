@@ -38,12 +38,14 @@ install(TARGETS math.pi DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 install(TARGETS math.sin DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 
 function (add_file target)
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${target}.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/${target}.h++)
   add_executable(math.${target} ${CMAKE_CURRENT_SOURCE_DIR}/${target}.c++)
   install(TARGETS math.${target} DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 
   endfunction()
 
 add_file(e)
+add_file(mult)
 
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
