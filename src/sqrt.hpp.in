@@ -1,0 +1,9 @@
+#ifndef sqrt_h
+#define sqrt_h
+#define VERSION "@ver@"
+#define PROGRAM_NAME "sin"
+#include <cmath>
+#include <iostream>
+#include <cstdio>
+using namespace std;
+#endif
