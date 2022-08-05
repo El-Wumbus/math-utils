@@ -49,6 +49,7 @@ add_file(mult)
 add_file(div)
 add_file(sqrt)
 add_file(pow)
+add_file(cos)
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 install(TARGETS math.dnorm DESTINATION lib)
