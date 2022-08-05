@@ -1,4 +1,4 @@
-#include "dnorm.h++"
+#include "dnorm.hpp"
 
 const long double EulerConstant = std::exp(1.0);
 const long double PI =

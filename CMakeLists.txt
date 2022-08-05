@@ -14,12 +14,12 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CURRENT_SOURCE_DIR src)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/dnorm.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/dnorm.h++)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/absval.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/absval.h++)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/add.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/add.h++)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sub.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/sub.h++)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/pi.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/pi.h++)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sin.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/sin.h++)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/dnorm.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/dnorm.hpp)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/absval.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/absval.hpp)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/add.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/add.hpp)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sub.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/sub.hpp)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/pi.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/pi.hpp)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sin.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/sin.hpp)
 
 
 add_executable(math.dnorm ${CMAKE_CURRENT_SOURCE_DIR}/dnorm.c++)
@@ -38,7 +38,7 @@ install(TARGETS math.pi DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 install(TARGETS math.sin DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 
 function (add_file target)
-  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${target}.h++.in ${CMAKE_CURRENT_SOURCE_DIR}/${target}.h++)
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${target}.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/${target}.hpp)
   add_executable(math.${target} ${CMAKE_CURRENT_SOURCE_DIR}/${target}.c++)
   install(TARGETS math.${target} DESTINATION ${CMAKE_INSTALL_PREFIX}/opt/math-utils/bin)
 
@@ -51,7 +51,7 @@ add_file(div)
 
 target_include_directories(math.dnorm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 install(TARGETS math.dnorm DESTINATION lib)
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/dnorm.h++ DESTINATION include)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/dnorm.hpp DESTINATION include)
 
 enable_testing()
 # define a function to simplify adding tests

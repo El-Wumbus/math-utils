@@ -1,4 +1,4 @@
-#include "div.h++"
+#include "div.hpp"
 double div(std::vector<double> values) {
   double result = 0;
   // Iterating through the vector and dividing each element by the previous element.

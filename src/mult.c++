@@ -1,4 +1,4 @@
-#include "mult.h++"
+#include "mult.hpp"
 double mult(std::vector<double> values) {
   // Multiplying all the values in the vector together.
   double result =1;
