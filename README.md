@@ -1,6 +1,6 @@
 # Math Utils
 
-Command line math utils becuase, why not?
+Command line math utils because, why not?
 
 ## Installation
 
